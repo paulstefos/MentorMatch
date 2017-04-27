@@ -15,6 +15,8 @@
 		50EABCC11E8CEAA000D11532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EABCBF1E8CEAA000D11532 /* LaunchScreen.storyboard */; };
 		50EABCCC1E8CEAA000D11532 /* MentorMatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EABCCB1E8CEAA000D11532 /* MentorMatchTests.m */; };
 		50EABCD71E8CEAA000D11532 /* MentorMatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EABCD61E8CEAA000D11532 /* MentorMatchUITests.m */; };
+		DA7FC5861EB28F530094D83C /* SpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FC5851EB28F530094D83C /* SpaceCell.m */; };
+		DA7FC5891EB29BEF0094D83C /* trophypic.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FC5881EB29BEF0094D83C /* trophypic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		50EABCD21E8CEAA000D11532 /* MentorMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentorMatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EABCD61E8CEAA000D11532 /* MentorMatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MentorMatchUITests.m; sourceTree = "<group>"; };
 		50EABCD81E8CEAA000D11532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7FC57E1EAD1FE80094D83C /* MentorMatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MentorMatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA7FC5851EB28F530094D83C /* SpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceCell.m; sourceTree = "<group>"; };
+		DA7FC5871EB28F5B0094D83C /* SpaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceCell.h; sourceTree = "<group>"; };
+		DA7FC5881EB29BEF0094D83C /* trophypic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophypic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				50EABCBF1E8CEAA000D11532 /* LaunchScreen.storyboard */,
 				50EABCC21E8CEAA000D11532 /* Info.plist */,
 				50EABCB11E8CEA9F00D11532 /* Supporting Files */,
+				DA7FC57E1EAD1FE80094D83C /* MentorMatch-Bridging-Header.h */,
 			);
 			path = MentorMatch;
 			sourceTree = "<group>";
@@ -117,6 +124,9 @@
 		50EABCB11E8CEA9F00D11532 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA7FC5881EB29BEF0094D83C /* trophypic.png */,
+				DA7FC5851EB28F530094D83C /* SpaceCell.m */,
+				DA7FC5871EB28F5B0094D83C /* SpaceCell.h */,
 				50EABCB21E8CEA9F00D11532 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -207,6 +217,8 @@
 				TargetAttributes = {
 					50EABCAD1E8CEA9F00D11532 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = T8S9644D36;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					50EABCC61E8CEAA000D11532 = {
@@ -248,6 +260,7 @@
 			files = (
 				50EABCC11E8CEAA000D11532 /* LaunchScreen.storyboard in Resources */,
 				50EABCBE1E8CEAA000D11532 /* Assets.xcassets in Resources */,
+				DA7FC5891EB29BEF0094D83C /* trophypic.png in Resources */,
 				50EABCBC1E8CEAA000D11532 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EABCB91E8CEAA000D11532 /* ViewController.m in Sources */,
+				DA7FC5861EB28F530094D83C /* SpaceCell.m in Sources */,
 				50EABCB61E8CEAA000D11532 /* AppDelegate.m in Sources */,
 				50EABCB31E8CEA9F00D11532 /* main.m in Sources */,
 			);
@@ -426,10 +440,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = T8S9644D36;
 				INFOPLIST_FILE = MentorMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = page.MentorMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MentorMatch/MentorMatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -437,10 +457,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = T8S9644D36;
 				INFOPLIST_FILE = MentorMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = page.MentorMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MentorMatch/MentorMatch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -509,6 +534,7 @@
 				50EABCDD1E8CEAA000D11532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50EABCDE1E8CEAA000D11532 /* Build configuration list for PBXNativeTarget "MentorMatchTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +543,7 @@
 				50EABCE01E8CEAA000D11532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50EABCE11E8CEAA000D11532 /* Build configuration list for PBXNativeTarget "MentorMatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +552,7 @@
 				50EABCE31E8CEAA000D11532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpaceCell.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *titles;
+    NSArray *images;
+    NSArray *descriptions;
+}
+
 
 
 @end
+
 
